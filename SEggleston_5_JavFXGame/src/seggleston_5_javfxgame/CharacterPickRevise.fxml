@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seggleston_5_javfxgame.CharacterPickReviseController">
+   <children>
+      <ImageView fx:id="Background" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/forest.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GlowWAR" fitHeight="135.0" fitWidth="179.0" layoutX="233.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/menuhero.gif" />
+         </image>
+         <effect>
+            <Shadow color="#ee690f" height="5.82" radius="2.41" width="5.82" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="WAR" fitHeight="120.0" fitWidth="161.0" layoutX="242.0" layoutY="230.0" onMouseClicked="#showStatsWAR" onMouseEntered="#glowYellowWAR" onMouseExited="#stopGlowWAR" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/menuhero.gif" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="182.0" layoutY="26.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Choose your Adventurer.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="StatBackground" fitHeight="82.0" fitWidth="252.0" layoutX="12.0" layoutY="258.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../resources/systembox.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="Cla" fill="WHITE" layoutX="18.0" layoutY="304.0" stroke="BLACK" strokeType="OUTSIDE" text="Class:" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="Job" disable="true" fill="WHITE" layoutX="25.0" layoutY="328.0" stroke="BLACK" strokeType="OUTSIDE" text="Job:" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="STR" fill="WHITE" layoutX="132.0" layoutY="305.0" stroke="#eb5405" strokeType="OUTSIDE" strokeWidth="0.5" text="STR:" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="AGI" fill="WHITE" layoutX="135.0" layoutY="328.0" stroke="#054a01" strokeType="OUTSIDE" strokeWidth="0.5" text="DR: 3" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="MAG" fill="WHITE" layoutX="193.0" layoutY="305.0" stroke="#720067" strokeType="OUTSIDE" strokeWidth="0.5" text="DMG: 4-9" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="CON" fill="WHITE" layoutX="195.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.5" text="CON:" visible="false">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.004807692307692308">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#ee0804" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Button fx:id="Create" layoutX="101.0" layoutY="355.0" mnemonicParsing="false" onAction="#NextScreen" text="Create" visible="false" />
+      <Text fx:id="NameTxt" fill="WHITE" layoutX="15.0" layoutY="281.0" stroke="BLACK" strokeType="OUTSIDE" text="Name:" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

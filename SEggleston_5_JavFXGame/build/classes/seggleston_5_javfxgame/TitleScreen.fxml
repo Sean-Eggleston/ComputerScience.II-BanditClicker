@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seggleston_5_javfxgame.TitleScreenController">
+   <children>
+      <ImageView fitHeight="402.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/l556K4N.gif" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="200.0" prefHeight="402.0" prefWidth="201.0">
+         <top>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="2.0" text="Bandit Slayer" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Sawasdee Bold" size="26.0" />
+               </font>
+               <fill>
+                  <RadialGradient centerX="0.26404494382022475" centerY="0.14903846153846154" cycleMethod="REFLECT" focusAngle="68.2" radius="0.5714285714285714">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <stroke>
+                  <RadialGradient centerX="0.26404494382022475" centerY="0.14903846153846154" cycleMethod="REFLECT" focusAngle="68.2" radius="0.5714285714285714">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#252323" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Text>
+         </top>
+         <center>
+            <Button mnemonicParsing="false" onAction="#loadSecond" prefHeight="26.0" prefWidth="65.0" text="START" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <ImageView fx:id="Hero" fitHeight="101.0" fitWidth="232.0" layoutX="264.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/hero.png" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <VBox layoutY="352.0" prefHeight="43.0" prefWidth="186.0">
+         <children>
+            <Text fill="WHITE" stroke="#070707" strokeType="OUTSIDE" text="Created by Sean Eggleston" wrappingWidth="200.7294921875" />
+            <Text fill="WHITE" stroke="#070707" strokeType="OUTSIDE" text="CAST Tech High School" wrappingWidth="200.7294921875">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" stroke="#070707" strokeType="OUTSIDE" text="Computer Science II" wrappingWidth="200.7294921875">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

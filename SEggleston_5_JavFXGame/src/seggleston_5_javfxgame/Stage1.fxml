@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seggleston_5_javfxgame.Stage1Controller">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="600.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/scene1.png" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="600.0" layoutY="336.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/vintage-2714966_1920.jpg" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="PlayerAP" layoutX="63.0" layoutY="355.0" prefWidth="200.0" progress="1.0">
+         <effect>
+            <ColorAdjust hue="-0.46" />
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="PlayerXP" layoutX="63.0" layoutY="375.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="PlayerHP" layoutX="63.0" layoutY="336.0" prefWidth="200.0" progress="1.0">
+         <effect>
+            <ColorAdjust brightness="-0.02" contrast="0.05" hue="0.95" saturation="0.02" />
+         </effect>
+      </ProgressBar>
+      <ImageView fx:id="idleBandit" fitHeight="124.0" fitWidth="147.0" layoutX="314.0" layoutY="212.0" onMouseClicked="#toAttackButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/banditidle.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="attackingBandit" fitHeight="124.0" fitWidth="147.0" layoutX="314.0" layoutY="201.0" onMouseClicked="#toAttackButton" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/attackingbandit.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="magicAttack" fitHeight="142.0" fitWidth="187.0" layoutX="100.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/attackinghero.gif" />
+         </image>
+         <effect>
+            <Shadow color="#f2ac33" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="attackingHero" fitHeight="118.0" fitWidth="158.0" layoutX="116.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/attackinghero.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="idleHero" fitHeight="118.0" fitWidth="158.0" layoutX="116.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/idlehero.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Text fill="WHITE" layoutX="6.0" layoutY="20.0" stroke="BLACK" strokeType="OUTSIDE" text="Clicker: Bandit Slayer" />
+      <Text fill="WHITE" layoutX="6.0" layoutY="37.0" stroke="BLACK" strokeType="OUTSIDE" text="Made by Sean Eggleston">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="6.0" layoutY="53.0" stroke="BLACK" strokeType="OUTSIDE" text="CAST Tech High School">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" layoutX="100.0" layoutY="27.0" startX="-100.0" />
+      <Line endX="80.0" layoutX="100.0" layoutY="40.0" startX="-100.0" />
+      <ProgressBar fx:id="enemyHP" layoutX="299.0" layoutY="199.0" opacity="0.5" prefHeight="20.0" prefWidth="158.0" progress="1.0">
+         <effect>
+            <ColorAdjust brightness="-0.02" contrast="0.05" hue="0.95" saturation="0.02" />
+         </effect>
+      </ProgressBar>
+      <ImageView fx:id="dialogueBox" fitHeight="52.0" fitWidth="323.0" layoutX="266.0" layoutY="341.0" opacity="0.85" pickOnBounds="true">
+         <image>
+            <Image url="@../resources/dialoguebar.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="actionText" fill="WHITE" layoutX="273.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting for Action.....!" wrappingWidth="310.0">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="269.0" layoutY="352.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="System Log">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Button fx:id="endTurnBtn" layoutX="5.0" layoutY="338.0" mnemonicParsing="false" onAction="#endTurn" opacity="0.75" prefHeight="59.0" prefWidth="48.0" text="End Turn" visible="false" wrapText="true" />
+      <ImageView fx:id="injuredBandit" fitHeight="151.0" fitWidth="131.0" layoutX="320.0" layoutY="195.0" onMouseClicked="#toAttackButton" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/injuredbandit.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="deadBandit" disable="true" fitHeight="151.0" fitWidth="131.0" layoutX="320.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/dyingbandit.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="arrowImage" fitHeight="59.0" fitWidth="48.0" layoutX="359.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/pointer.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="clickText" fill="WHITE" layoutX="346.0" layoutY="174.0" stroke="BLACK" strokeWidth="1.75" text="Click">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="shopButton" layoutX="-3.0" layoutY="336.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" text="Shop" />
+      <Text layoutX="103.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Health Points (HP)" />
+      <Text layoutX="105.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Points (AP)" />
+      <Text layoutX="90.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience Points (XP)" />
+      <Text layoutX="27.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="statsButton" layoutX="-2.0" layoutY="367.0" mnemonicParsing="false" onAction="#openLevelUp" prefHeight="30.0" prefWidth="62.0" text="Stats" />
+      <ImageView fx:id="healingGlow" fitHeight="138.0" fitWidth="187.0" layoutX="104.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/dyinghero.gif" />
+         </image>
+         <effect>
+            <Shadow color="#13d705" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="dyingHero" fitHeight="124.0" fitWidth="160.0" layoutX="117.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/dyinghero.gif" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="StatsBackground" fitHeight="274.0" fitWidth="152.0" layoutX="1.0" layoutY="56.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../resources/systembox.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="STRText" fill="#ff5c00" layoutX="3.0" layoutY="120.0" stroke="WHITE" strokeType="OUTSIDE" text="STR: 16, +3" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Text>
+      <Text fx:id="AGIText" fill="#2c2929" layoutX="3.0" layoutY="173.0" stroke="WHITE" strokeType="OUTSIDE" text="DR: 3 Dmg Resist" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Text>
+      <Text fx:id="CONText" layoutX="3.0" layoutY="228.0" stroke="WHITE" strokeType="OUTSIDE" text="CON: 14, +2" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#f50000" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <Text fx:id="WEPText" fill="#eb0707" layoutX="3.0" layoutY="279.0" stroke="WHITE" strokeType="OUTSIDE" text="WEP: 4-9 Dmg" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Text>
+      <Button fx:id="increaseSTRButton" layoutX="15.0" layoutY="124.0" mnemonicParsing="false" onAction="#increaseSTR" prefHeight="26.0" prefWidth="107.0" text="Increase STR" visible="false" />
+      <Button fx:id="increaseAGIButton" layoutX="15.0" layoutY="180.0" mnemonicParsing="false" onAction="#increaseAGI" prefHeight="26.0" prefWidth="107.0" text="Increase DR" visible="false" />
+      <Button fx:id="increaseCONButton" layoutX="15.0" layoutY="235.0" mnemonicParsing="false" onAction="#increaseCON" text="Increase CON" visible="false" />
+      <Button fx:id="increaseWEPButton" layoutX="15.0" layoutY="285.0" mnemonicParsing="false" onAction="#increaseWEP" text="Increase WEP" visible="false" />
+      <Text fx:id="PointsText" fill="WHITE" layoutX="7.0" layoutY="80.0" stroke="BLACK" strokeType="OUTSIDE" text="Points to Spend: 20" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="hideButtons" layoutX="-1.0" layoutY="367.0" mnemonicParsing="false" onAction="#closeLevelUp" prefHeight="30.0" prefWidth="62.0" text="Hide" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="104.0" layoutY="21.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Adeventurers don't just spawn, what's your story?">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="104.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Spent your Early Life as:" wrappingWidth="148.69921875" />
+      <Text layoutX="125.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason for Adventuring:" />
+      <Text layoutX="156.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Later you became:" />
+      <Text layoutX="158.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your family were:" />
+      <SplitMenuButton layoutX="253.0" layoutY="41.0" mnemonicParsing="false" text="CHOOSE ONE">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+   </children>
+</Pane>
