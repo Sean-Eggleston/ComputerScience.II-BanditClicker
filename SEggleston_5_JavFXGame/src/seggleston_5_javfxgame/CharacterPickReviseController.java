@@ -62,6 +62,10 @@ public class CharacterPickReviseController implements Initializable {
     AnchorPane rootPane;
     @FXML
     Text NameTxt;
+    @FXML
+    private ImageView clickImage;
+    @FXML
+    private Text clickText;
 
     /**
      * Initializes the controller class.
@@ -83,6 +87,8 @@ public class CharacterPickReviseController implements Initializable {
 
     @FXML
     void showStatsWAR(MouseEvent event) {
+        clickText.setVisible(false);
+        clickImage.setVisible(false);
         NameTxt.setText("Name: Spartan");
         GlowWAR.setVisible(true);
         playerSTR = 16;
@@ -112,17 +118,7 @@ public class CharacterPickReviseController implements Initializable {
         }
     }
 
-    @FXML
-    private void stopGlowSorc(MouseEvent event) {
 
-    }
-
-    @FXML
-    private void GlowSorc(MouseEvent event) {
-
-    }
-
-    @FXML
     void showStatsSORC(MouseEvent event) {
         GlowWAR.setVisible(false);
   
