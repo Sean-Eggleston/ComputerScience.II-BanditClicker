@@ -189,7 +189,7 @@
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </Text>
-      <Button fx:id="shopButton" layoutX="-3.0" layoutY="336.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" text="Shop" />
+      <Button fx:id="shopButton" layoutX="-3.0" layoutY="336.0" mnemonicParsing="false" onAction="#openShop" prefHeight="30.0" prefWidth="62.0" text="Shop" />
       <Text layoutX="103.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Health Points (HP)" />
       <Text layoutX="105.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Points (AP)" />
       <Text layoutX="90.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience Points (XP)" />

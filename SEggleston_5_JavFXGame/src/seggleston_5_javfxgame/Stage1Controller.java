@@ -161,7 +161,7 @@ public class Stage1Controller implements Initializable {
     int pCONMOD = ((12 - 10) / 2);
 
     double playerHP = ((double) (pCONMOD + 10) * playerLevel);
-    double playerAP = ((playerLevel / 5) + 1);
+    double playerAP = ((playerLevel / 5) + 2);
     int playerDR = (pAGIMOD * 3);
 
     double[] levelList = {300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000, 140000,
@@ -188,7 +188,7 @@ public class Stage1Controller implements Initializable {
         pSTRMOD = ((playerSTR - 10) / 2);
         pAGIMOD = ((playerAGI - 10) / 2);          // D&D Like Modifiers calc
         pCONMOD = ((playerCON - 10) / 2);
-        playerDR = (pAGIMOD * 3);
+        playerDR = playerDR;
         playerHP = ((double) (pCONMOD + 10) * playerLevel);
         System.out.println("Player HP: " + playerHP);
         playerAP = ((playerLevel / 5) + 1);
@@ -286,6 +286,7 @@ public class Stage1Controller implements Initializable {
                 pMaxXP = (float) toNextLvl;
                 playerAP = ((playerLevel / 5) + 1);
                 playerStatsRefresh();
+                StatsTextBuffer();
             }
             PlayerXP.setProgress((float) pCurrentXP / pMaxXP);
             Timeout(newEnemy, 1); // Wait <1-2> seconds, execute Runnable <newEnemy>
@@ -405,9 +406,9 @@ public class Stage1Controller implements Initializable {
             deadBandit.setVisible(true);
         }
     };
-    
+
     Runnable playerdeathsetup = () -> {
-      actionText.setText("Healing... Going back 5 enhancements...");
+        actionText.setText("Healing... Going back 5 enhancements...");
     };
 
     Runnable playerdeath = () -> {
@@ -432,9 +433,9 @@ public class Stage1Controller implements Initializable {
 
     @FXML
     void increaseAGI(ActionEvent event) {
-        if (playerPoints > 1) {
-            playerAGI = playerAGI + 2;
-            playerPoints = playerPoints - 2;
+        if (playerPoints > 0) {
+            playerDR++;
+            playerPoints = playerPoints - 1;
             playerStatsRefresh();
             StatsTextBuffer();
         } else {
@@ -503,6 +504,12 @@ public class Stage1Controller implements Initializable {
     void closeLevelUp(ActionEvent event) {
         UIElementsVisi(false, true);
     }
+
+    @FXML
+    void openShop(ActionEvent event) {
+        System.out.println("Not implemented yet! Sorry!");
+        actionText.setText("To be implemented! Sorry!");
+    }  
 
     class Enemy {
 
@@ -597,7 +604,5 @@ public class Stage1Controller implements Initializable {
         public void seteSTRMOD(int eSTRMOD) {
             this.eSTRMOD = eSTRMOD;
         }
-
     }
-
 }

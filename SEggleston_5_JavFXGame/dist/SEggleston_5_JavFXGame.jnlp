@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SEggleston_5_JavFXGame.jar" size="36227616" download="eager" />
+    <jar href="SEggleston_5_JavFXGame.jar" size="20024994" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SEggleston_5_JavFXGame" >
     <param name="requiredFXVersion" value="8.0+"/>
